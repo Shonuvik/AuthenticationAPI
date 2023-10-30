@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5122",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionString": "",
+        "JWTKey": "jksabdkjhqjxbhjkhlaksjxhkgqohxhkjaslxhjgqiuwhxkhaks_sdjwfkwjhxqjhx"
+      },
+      "dotnetRunMessages": true,
+      "SystemName": "authenticationApi"
+    }
+  }
+}

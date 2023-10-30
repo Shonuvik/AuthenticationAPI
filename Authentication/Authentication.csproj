@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="03-Repositories\" />
+    <None Remove="Helpers\" />
+    <None Remove="Models\" />
+    <None Remove="01-Controllers\" />
+    <None Remove="02-Services\" />
+    <None Remove="02-Services\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="03-Repositories\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
+    <Folder Include="01-Controllers\" />
+    <Folder Include="02-Services\" />
+    <Folder Include="02-Services\Interfaces\" />
+  </ItemGroup>
+</Project>
