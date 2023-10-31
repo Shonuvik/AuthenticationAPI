@@ -4,7 +4,7 @@ namespace Authentication.Services.Interfaces
 {
     public interface IJWTManagerService
 	{
-		Task<TokenModel> AuthAsync(CredentialModel credential);
+		TokenModel AuthAsync(CredentialModel credential);
 	}
 }
 

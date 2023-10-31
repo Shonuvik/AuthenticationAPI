@@ -23,9 +23,9 @@ namespace Authentication.Controllers
 		[ProducesResponseType(typeof(TokenModel), StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status401Unauthorized)]
 		[ProducesResponseType(typeof(ErrorDetails), StatusCodes.Status400BadRequest)]
-		public async Task<ActionResult<string>> Authenticate(CredentialModel credential)
+		public ActionResult<string> Authenticate(CredentialModel credential)
 		{
-			var token = await _jwtManangerService.AuthAsync(credential);
+			var token = _jwtManangerService.AuthAsync(credential);
 
 			if (token == null)
 				return Unauthorized();
