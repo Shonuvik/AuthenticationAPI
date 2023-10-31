@@ -1,5 +1,4 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Authentication.Models;
@@ -16,9 +15,15 @@ namespace Authentication.Services.Interfaces
             _configuration = configuration;
         }
 
-        public async Task<TokenModel> AuthAsync(CredentialModel credential)
+        public TokenModel AuthAsync(CredentialModel credential)
         {
+            var clientId = _configuration["ClientId"];
+            var secret = _configuration["Secret"];
+
             if (credential is null)
+                return null;
+
+            if (!(credential.ClientId == clientId && credential.Secret == secret))
                 return null;
 
             var jwtKey = _configuration["JWTKey"];

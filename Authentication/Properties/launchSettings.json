@@ -8,10 +8,12 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ConnectionString": "",
-        "JWTKey": "jksabdkjhqjxbhjkhlaksjxhkgqohxhkjaslxhjgqiuwhxkhaks_sdjwfkwjhxqjhx"
+        "JWTKey": "jksabdkjhqjxbhjkhlaksjxhkgqohxhkjaslxhjgqiuwhxkhaks_sdjwfkwjhxqjhx",
+        "Secret": "95b4f998-8400-4c46-8d45-588b4f6d7d17",
+        "ClientId": "1Vjyl3Q5yEqsO2L-ZBVMmg"
       },
-      "dotnetRunMessages": true,
-      "SystemName": "authenticationApi"
+      "SystemName": "authenticationApi",
+      "dotnetRunMessages": true
     }
   }
 }
