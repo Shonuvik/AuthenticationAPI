@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+  env:
+  DOTNET_ROOT: '.'      # set this to the path to your web app project, defaults to the repository root
+
 jobs:
   build:
     runs-on: windows-latest
