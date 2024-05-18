@@ -1,6 +1,10 @@
 ﻿using System.Text;
 using System.Text.Json.Serialization;
 using Authentication.Helpers;
+using Authentication.Repositories;
+using Authentication.Repositories.DbContext;
+using Authentication.Repositories.Interfaces;
+using Authentication.Services;
 using Authentication.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -8,8 +12,9 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var configuration = builder.Configuration;
 
+// Add services to the container.
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -39,7 +44,10 @@ builder.Services.AddCors(options =>
         });
 });
 
+AddDataBase(builder.Services, configuration);
 builder.Services.AddScoped<IJWTManagerService, JWTManagerService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers().AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
@@ -72,3 +80,9 @@ app.UseSwaggerUI(c => c.SwaggerEndpoint("v1/swagger.json", "Financial Management
 
 app.Run();
 
+
+
+static void AddDataBase(IServiceCollection services, IConfiguration configuration)
+{
+    services.AddScoped<IUnitOfWork>(s => new UnitOfWork(configuration["ConnectionString"]));
+}

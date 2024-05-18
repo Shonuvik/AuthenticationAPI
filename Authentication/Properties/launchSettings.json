@@ -7,10 +7,8 @@
       "applicationUrl": "http://localhost:5122",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionString": "",
-        "JWTKey": "jksabdkjhqjxbhjkhlaksjxhkgqohxhkjaslxhjgqiuwhxkhaks_sdjwfkwjhxqjhx",
-        "Secret": "95b4f998-8400-4c46-8d45-588b4f6d7d17",
-        "ClientId": "1Vjyl3Q5yEqsO2L-ZBVMmg"
+        "ConnectionString": "Server=localhost,1433;Database=tempdb;User Id=sa;Password=Admin123;",
+        "JWTKey": "jksabdkjhqjxbhjkhlaksjxhkgqohxhkjaslxhjgqiuwhxkhaks_sdjwfkwjhxqjhx"
       },
       "SystemName": "authenticationApi",
       "dotnetRunMessages": true

@@ -12,6 +12,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +25,8 @@
     <None Remove="01-Controllers\" />
     <None Remove="02-Services\" />
     <None Remove="02-Services\Interfaces\" />
+    <None Remove="03-Repositories\DbContext\" />
+    <None Remove="03-Repositories\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="03-Repositories\" />
@@ -29,5 +35,7 @@
     <Folder Include="01-Controllers\" />
     <Folder Include="02-Services\" />
     <Folder Include="02-Services\Interfaces\" />
+    <Folder Include="03-Repositories\DbContext\" />
+    <Folder Include="03-Repositories\Interfaces\" />
   </ItemGroup>
 </Project>
