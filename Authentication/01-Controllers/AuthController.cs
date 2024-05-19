@@ -46,4 +46,3 @@ namespace Authentication.Controllers
         }
     }
 }
-

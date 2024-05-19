@@ -47,4 +47,3 @@ namespace Authentication.Services.Interfaces
         }
     }
 }
-
