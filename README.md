@@ -1,4 +1,4 @@
-# Baixa a imagem docker do SQLServer 
+# Baixe a imagem docker do SQLServer 
 - mcr.microsoft.com/mssql/server:2022-latest
 - Após executa-la em um container docker, acesso sua instancia através do Azure Data Studio ou SQL Management Studio e, exucute os scripts abaixo
 
