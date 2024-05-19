@@ -1,4 +1,4 @@
-﻿using Authentication.Helpers;
+using Authentication.Helpers;
 using Authentication.Models;
 using Authentication.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;

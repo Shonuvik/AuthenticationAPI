@@ -1,4 +1,4 @@
-﻿namespace Authentication.Models
+namespace Authentication.Models
 {
     public class CredentialModel
 	{
@@ -9,4 +9,3 @@
 		public string Secret { get; set; }
 	}
 }
-
