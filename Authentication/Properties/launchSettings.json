@@ -7,7 +7,7 @@
       "applicationUrl": "http://localhost:5122",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionString": "",
+        "ConnectionString": "Server=localhost,1433;Database=tempdb;User Id=sa;Password=Admin123;",
         "JWTKey": "jksabdkjhqjxbhjkhlaksjxhkgqohxhkjaslxhjgqiuwhxkhaks_sdjwfkwjhxqjhx"
       },
       "dotnetRunMessages": true,
