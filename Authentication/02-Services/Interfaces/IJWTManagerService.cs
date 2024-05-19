@@ -1,4 +1,4 @@
-﻿using Authentication.Models;
+using Authentication.Models;
 
 namespace Authentication.Services.Interfaces
 {
@@ -7,4 +7,3 @@ namespace Authentication.Services.Interfaces
 		Task<TokenModel> AuthAsync(CredentialModel credential);
 	}
 }
-
